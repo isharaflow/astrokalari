@@ -14,7 +14,7 @@
   --radius:6px;
 }
 *{box-sizing:border-box;}
-html{scroll-behavior:smooth;}
+html{scroll-behavior:smooth;overflow-x:hidden;width:100%;max-width:100%;}
 body{
   background:var(--cream);
   color:var(--ink);
@@ -22,6 +22,9 @@ body{
   font-weight:400;
   font-size:16.5px;
   overflow-x:hidden;
+  width:100%;
+  max-width:100%;
+  position:relative;
   cursor:none;
 }
 h1,h2,h3,h4,.font-display{
@@ -227,7 +230,7 @@ a{text-decoration:none;color:inherit;}
 }
 .gallery-tab:hover {
     border-color: var(--accent);
-    color: var(--accent);
+    color: #be902c;
 }
 @media (max-width:767px){
   .gallery-caption{opacity:1;transform:translateY(0);font-size:.85rem;padding:12px;}
@@ -311,6 +314,7 @@ footer a:hover{color:var(--accent);}
 .slider-dots .dot.active{background:var(--accent);width:22px;border-radius:5px;}
 @media (max-width:991px){
   .testimonial-slide{flex:0 0 calc(50% - 12px);}
+  .about-badge {display: inline-block;}
 }
 @media (max-width:576px){
   .testimonial-slide{flex:0 0 100%;}
