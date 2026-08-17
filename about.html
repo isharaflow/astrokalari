@@ -62,6 +62,37 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
 <link href="css/styles.css" rel="stylesheet">
 
+<style>
+/* Guru portraits — My Guru section */
+.guru-portrait img{
+  width:100%;
+  max-width:200px;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border-radius:50%;
+  border:4px solid #c9a25a;
+  box-shadow:0 10px 28px rgba(0,0,0,.18);
+}
+.guru-portrait .guru-name{
+  margin-top:1rem;
+  margin-bottom:0;
+  font-family:'Philosopher',serif;
+  font-style:italic;
+  font-weight:700;
+}
+
+/* Heritage carousel */
+.about-img-wrap .heritage-carousel,
+.about-img-wrap .heritage-carousel .carousel-inner,
+.about-img-wrap .heritage-carousel .carousel-item{
+  height:100%;
+}
+.about-img-wrap .heritage-carousel .carousel-item img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+</style>
 </head>
 <body>
 
@@ -108,14 +139,26 @@
 <!-- ================= MY GURU ================= -->
 <section class="section" id="guru">
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-9 text-center reveal">
+    <div class="row align-items-center justify-content-center gy-4">
+      <div class="col-md-4 col-lg-3 text-center reveal-left">
+        <div class="guru-portrait">
+          <img src="img/sreevalsan-panicker-guru-rajan-panicker.jpeg" alt="Guru Rajan Panicker">
+          <p class="guru-name">Rajan Panicker</p>
+        </div>
+      </div>
+      <div class="col-md-8 col-lg-6 text-center reveal">
         <span class="eyebrow">My Guru</span>
         <h2 class="section-title mt-2 mb-3">From Guru to Tradition</h2>
         <div class="gold-rule mx-auto"></div>
         <p class="mt-4">My journey in Astrology began when I was just seven years old.</p>
         <p>From my father's initial guidance to further traditional studies at Padumanna, my path has been shaped by generations of knowledge, Sanskrit learning and the traditional methods of Astrology and Prashna.</p>
         <p>Today, after 16 years of dedicated learning and practice, I continue to walk the path of traditional Astrology with humility and respect.</p>
+      </div>
+      <div class="col-md-4 col-lg-3 text-center reveal-right">
+        <div class="guru-portrait">
+          <img src="img/sreevalsan-panicker-guru-gopalakrishna-panicker.jpeg" alt="Guru Gopalakrishna Panicker">
+          <p class="guru-name">Gopalakrishna Panicker</p>
+        </div>
       </div>
     </div>
   </div>
@@ -127,8 +170,29 @@
     <div class="row align-items-center gy-5 flex-lg-row-reverse">
       <div class="col-lg-5 reveal-right">
         <div class="about-img-wrap">
-          <img src="img/madasserikalarikkal.jpg" alt="Madasseri Kalarickal — ancestral home of Jyothisha and Kalari heritage">
-          <div class="about-badge"><span>Ancestral Home</span>Madasseri Kalarickal, Malappuram</div>
+          <div id="heritageCarousel" class="carousel slide heritage-carousel" data-bs-ride="carousel" data-bs-interval="4000">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/madasserikalarikkal-old.jpeg" class="d-block w-100" alt="Guru Rajan Panicker — guru lineage of Madasseri Kalarickal">
+              </div>
+              <div class="carousel-item">
+                <img src="img/madasserikalarikkal.jpg" class="d-block w-100" alt="Guru Gopalakrishna Panicker — guru lineage of Madasseri Kalarickal">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heritageCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heritageCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#heritageCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#heritageCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+          </div>
+          <div class="about-badge"><span>Guru Lineage</span>Rajan Panicker &amp; Gopalakrishna Panicker</div>
         </div>
       </div>
       <div class="col-lg-7 reveal-left">
