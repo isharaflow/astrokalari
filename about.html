@@ -92,6 +92,25 @@
   height:100%;
   object-fit:cover;
 }
+.heritage-more{
+  display:grid;
+  grid-template-rows:0fr;
+  opacity:0;
+  overflow:hidden;
+  transition:grid-template-rows .5s ease, opacity .4s ease;
+}
+.heritage-more > div{overflow:hidden;}
+.heritage-more.is-open{
+  grid-template-rows:1fr;
+  opacity:1;
+  margin-bottom:1.25rem;
+}
+.heritage-more .heritage-subhead{
+  margin-top:1.25rem;
+  margin-bottom:.5rem;
+  letter-spacing:1px;
+}
+.heritage-toggle{cursor:pointer;}
 </style>
 </head>
 <body>
@@ -192,15 +211,182 @@
               <button type="button" data-bs-target="#heritageCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
             </div>
           </div>
-          <div class="about-badge"><span>Guru Lineage</span>Rajan Panicker &amp; Gopalakrishna Panicker</div>
+          <div class="about-badge"><span>Our Ancestral Legacy</span>Preserving the Heritage of Madasseri Kalari</div>
         </div>
       </div>
       <div class="col-lg-7 reveal-left">
-        <span class="eyebrow">Madasseri Kalarickalckal</span>
-        <h2 class="section-title mt-2 mb-3">The Heritage of Madasseri Kalarickal</h2>
-        <p>Astrology is not simply a profession for me. It is part of a family and cultural heritage.</p>
-        <p>My great-grandfather was both a Kalari Ashan and astrologer. Our ancestral connection with these traditional disciplines continues through our family home, known as Madasseri Kalarickal.</p>
-        <p>This heritage has shaped my understanding of discipline, learning, tradition and service.</p>
+        <span class="eyebrow">Madasseri Kalari</span>
+        <h2 class="section-title mt-2 mb-3">A Legacy of Astrology, Kalaripayattu, Ayurveda and Marma Tradition</h2>
+           <p class="mt-4"> Madasseri Kalari is more than the name of a traditional family home; it represents a lineage deeply connected with the ancient cultural traditions of Kerala. For generations, the Madasseri family was known for producing practitioners and scholars of Kalaripayattu, Ayurveda, Marma Chikitsa, and traditional astrology. These disciplines were not merely occupations, but important parts of the family's knowledge system, identity, and way of life.
+  </p>
+
+  <p>
+    At the heart of this heritage stood the family's ancestral place of worship, dedicated to their Kalari Para Devatha, Ghaloorika Devi. The spiritual traditions associated with the deity formed an important foundation of the family's cultural and martial heritage. The members of the family regarded their traditional knowledge and practices as a responsibility entrusted to them through generations.
+  </p>
+        <div class="heritage-more" id="heritageMore">
+		<div>
+			 <h3>Masters of the Madasseri Tradition</h3>
+
+  <p>
+    Among the distinguished figures associated with Madasseri Kalari was Innikelu Ashaan, remembered as one of the great Kalari masters of the family tradition. His expertise and dedication contributed to the preservation of Kalaripayattu within the household and its surrounding community.
+  </p>
+
+  <p>
+    Appunni Panicker was another prominent figure in the lineage. He was renowned as a traditional astrologer and was also a poet. His intellectual and literary interests reflected the broader scholarly character of the Madasseri tradition, where astrology, literature, spirituality, and martial knowledge existed alongside one another.
+  </p>
+
+  <p>
+    Kandaru Panicker, regarded as the last of the family's traditional masters in the fields of Ayurveda, Marma Chikitsa, and Kalaripayattu, carried forward an important part of this ancestral knowledge. His life represents a period when these disciplines were still closely connected within the traditional household system of Kerala.
+  </p>
+
+  <h3>The Era of Suppression</h3>
+
+  <p>
+    The Madasseri family continued the practice and teaching of Kalaripayattu until the period when British colonial rule imposed restrictions on traditional martial practices in Kerala. Following this historical disruption, the family gradually discontinued formal Kalari training.
+  </p>
+
+  <p>
+    Although the martial tradition became dormant, the family's commitment to traditional astrology continued. Over the following generations, astrology remained an important field of study and professional practice within the family.
+  </p>
+
+  <p>
+    As time passed, the physical Kalari itself was eventually lost. Changes within the family and a gradual decline in interest among some members contributed to the destruction of the original Kalari structure. For nearly two generations, the martial aspect of the family's heritage remained largely dormant.
+  </p>
+
+  <h3>The Revival of Madasseri Kalari</h3>
+
+  <p>
+    A significant turning point came when Rajan Panicker, the father of Sreevalsan, took steps to renew the family's Kalari space and revive its traditional presence.
+  </p>
+
+  <p>
+    Inspired by the ancestral connection to Kalaripayattu, Sreevalsan later made a personal decision to study the martial art and reconnect with the heritage of his forefathers. His training was guided by Vipindas Gurukkal of Athma Kalari, whose guidance and instruction played an important role in helping him rediscover and carry forward this ancestral tradition.
+  </p>
+
+  <p>
+    For Sreevalsan, learning Kalaripayattu was not simply the pursuit of a martial art. It was a conscious effort to reconnect with a heritage that had remained dormant within the family for generations.
+  </p>
+
+  <h3>Preserving a Heritage for the Future</h3>
+
+  <p>
+    Today, Sreevalsan continues two important dimensions of the Madasseri legacy. Professionally, he follows the family's traditional path of astrology; passionately, he continues the practice of Kalaripayattu.
+  </p>
+
+  <p>
+    His vision is to restore the cultural identity and traditional values associated with Madasseri Kalari and to ensure that the knowledge, discipline, and spirit inherited from his ancestors are not lost to time.
+  </p>
+
+  <p>
+    The revival of Madasseri Kalari is therefore not merely the restoration of a physical space. It is the continuation of a living family heritage—a heritage shaped by astrology, martial arts, Ayurveda, Marma tradition, spirituality, scholarship, and devotion.
+  </p>
+
+  <p>
+    From the knowledge of the ancestors to the responsibility of the present generation, Madasseri Kalari stands as a continuing journey of preservation, revival, and transmission of Kerala's traditional heritage to future generations.
+  </p>
+		</div></div>
+
+		<a class="btn-gold heritage-toggle" href="#" id="heritageToggleBtn" data-target="heritageMore">Show more →</a>
+	  </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PADUMANNA KALARI ================= -->
+<section class="section" id="padumanna">
+  <div class="container">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-5 reveal-left">
+        <div class="about-img-wrap">
+          <img src="img/madasserikalarikkal-old.jpeg" alt="Padumanna Kalari — traditional centre of Gurukula Astrology at Chundampatta, Palakkad">
+          <div class="about-badge"><span>Gurukula Tradition</span>Padumanna Kalari</div>
+        </div>
+      </div>
+      <div class="col-lg-7 reveal-right">
+        <span class="eyebrow">Padumanna Kalari</span>
+        <h2 class="section-title mt-2 mb-3">A Living Tradition of Gurukula Astrology</h2>
+        <div class="gold-rule"></div>
+        <p class="mt-4">Padumanna Kalari, situated at Chundampatta in Palakkad district, Kerala, near the Pulamanthol River, is renowned as a traditional centre of Gurukula Sampradaya, where knowledge of Sanskrit and classical astrology has been preserved and transmitted through generations.
+  </p>
+
+  <p>
+    The name Padumanna is traditionally associated with the words “Padu,” meaning intelligence or wisdom, and “Manna,” meaning soil or earth. The place has long been associated with the birth and upbringing of distinguished scholars of Sanskrit and astrology.
+  </p>
+        <div class="heritage-more" id="padumannaMore"><div>
+		 <p>
+    At the heart of Padumanna Kalari is its sacred Akshara Kalari, a traditional centre of learning where knowledge is regarded not merely as an academic discipline, but as a sacred responsibility. The principal deity worshipped here is Lord Ganesha, revered as Padumanna Ganapathi, who represents wisdom, learning and the removal of obstacles.
+  </p>
+
+  <h3>The Gurukula Sampradaya</h3>
+
+  <p>
+    Padumanna Kalari continues to uphold the traditional Indian Rishi Parampara and the Gurukula system of learning. Even in the modern era, this ancient method of education remains an important part of its identity.
+  </p>
+
+  <p>
+    Students who aspire to study Sanskrit and traditional astrology have been welcomed into this lineage and guided according to the principles of the Gurukula tradition. The emphasis has traditionally been placed on knowledge, discipline, character and the preservation of the Shishya Parampara, rather than on material gain.
+  </p>
+
+  <p>
+    This selfless approach to teaching has earned Padumanna Kalari a respected place in the traditional astrological heritage of Kerala. The true wealth of the Kalari lies in the knowledge it preserves and the generations of students who have carried that knowledge forward.
+  </p>
+
+  <h3>A Distinguished Lineage of Astrologers</h3>
+
+  <p>
+    Among the eminent astrologers associated with Padumanna Kalari was Bhanuunni Panicker, remembered as a highly accomplished scholar of traditional astrology. His knowledge extended across numerous classical astrological texts and traditions, and he became particularly renowned for his mastery of Ashtamangala Prashna.
+  </p>
+
+  <p>
+    His reputation in Ashtamangala Prashna became widely known throughout Kerala, establishing a distinguished tradition that continued through his lineage.
+  </p>
+
+  <p>
+    His son, Gopalakrishna Panicker, became another prominent exponent of Ashtamangala Prashna and is my revered Guru. Under his guidance, I had the privilege of studying the traditional foundations of astrology, Sanskrit and the practical application of classical astrological principles.
+  </p>
+
+  <p>
+    The lineage continues through the next generation, including Sreejan Panicker and Sreejith Panicker, who continue to practise Ashtamangala Prashna in Kerala and beyond.
+  </p>
+
+  <h3>Knowledge Through Tradition</h3>
+
+  <p>
+    One of the distinctive features of Padumanna Kalari is its commitment to traditional, text-based and practical learning. The teachings are rooted in classical Sanskrit texts and the interpretative methods preserved through the Guru–Shishya tradition.
+  </p>
+
+  <p>
+    The Gurukula system is not simply a method of learning astrology. It is a process of living with the knowledge, understanding its principles, observing its applications and gradually developing the wisdom required to interpret them responsibly.
+  </p>
+
+  <p>
+    In this tradition, astrology is not approached merely as a means of livelihood. It is regarded as a body of ancient knowledge that carries intellectual, cultural and spiritual significance.
+  </p>
+
+  <p>
+    For this reason, studying astrology through the Padumanna Gurukula tradition can be compared to undertaking a rigorous course of traditional higher learning—where the Guru's guidance, personal discipline, textual study and practical experience together form the foundation of education.
+  </p>
+
+  <h3>A Legacy That Continues</h3>
+
+  <p>
+    Through generations of Gurus and Shishyas, Padumanna Kalari has contributed to the preservation and transmission of Kerala's traditional Vedic astrological heritage.
+  </p>
+
+  <p>
+    Its greatest legacy is not simply the number of astrologers it has produced, but the knowledge, discipline and traditional values passed from Guru to Shishya.
+  </p>
+
+  <p>
+    For me personally, Padumanna Kalari holds a place of profound significance. It is where I had the opportunity to receive guidance from my revered Guru, Gopalakrishna Panicker, and to deepen my understanding of the traditional approach to astrology.
+  </p>
+
+  <p>
+    The knowledge received through this lineage continues to influence my own practice and my commitment to preserving the Gurukula Sampradaya of Kerala astrology for future generations.
+  </p>
+		</div></div>
+
+        <a class="btn-gold heritage-toggle" href="#" id="padumannaToggleBtn" data-target="padumannaMore">Show more →</a>
       </div>
     </div>
   </div>
@@ -362,6 +548,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     requestAnimationFrame(updateCounter);
 
+  });
+
+  // ============ Show More / Show Less toggles (Madasseri Kalari, Padumanna Kalari, etc.) ============
+  document.querySelectorAll('.heritage-toggle').forEach(function (btn) {
+    var panel = document.getElementById(btn.dataset.target);
+    if (!panel) return;
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      var isOpen = panel.classList.toggle('is-open');
+      if (isOpen) {
+        btn.innerHTML = 'Show less ↑';
+      } else {
+        btn.innerHTML = 'Show more →';
+        panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    });
   });
 
 });
