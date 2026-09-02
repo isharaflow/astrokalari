@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consultation Requests | Sreevalsan — Madasseri Kalari</title>
+<!--
+  NOTE: This is an internal/admin page for reviewing consultation
+  requests submitted via the website form. It is not meant to be
+  indexed by search engines.
+-->
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="img/favicon.png">
+
+<!-- ===== Same font / framework assets as the rest of the site ===== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- ===== Site-wide stylesheet (same file used by index.html, about.html, etc.) ===== -->
+<link href="css/styles.css" rel="stylesheet">
+
+<!-- ===== Flatpickr: lightweight calendar widget, used only for date-marking ===== -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+<!-- ===== Page-specific styles for this page only ===== -->
+<link href="css/consultation-requests.css" rel="stylesheet">
+
+<style>
+/* Small tweaks kept inline because they only apply to this template's
+   navbar/footer wrapper and are safe no-ops if styles.css already
+   defines them. */
+a.navbar-brand { display: flex; align-content: center; align-items: center; }
+.astrologo img { width: 80px; margin-right: 15px; }
+.navbar { padding: 3px 0 !important; }
+</style>
+</head>
+<body>
+
+<!-- ================= NAVBAR (same as site template) ================= -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <div class="astrologo">
+        <img src="img/sreevalsan-astrologer-logo.png" width="150" alt="Sreevalsan's services Kerala astrology icon" loading="lazy" decoding="async">
+      </div>
+      <div class="astroname">
+        <span class="brand-name">AstroKalari</span>
+        <span class="brand-sub">Traditional Vedic Kerala Astrologer</span>
+      </div>
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav align-items-lg-center">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Sreevalsan</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="testimonials.html">Testimonials</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        <li class="nav-item ms-lg-3 mt-2 mt-lg-0"><a class="btn-gold" href="index.html#contact">Book a Consultation</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= PAGE CONTENT ================= -->
+<main class="cr-page">
+  <div class="container cr-wrap">
+
+    <div class="cr-header reveal">
+      <h1>Consultation Requests</h1>
+      <p class="cr-subtitle">Select a date on the calendar to view all consultation requests submitted for that day. Dates with a blue dot have at least one request.</p>
+    </div>
+
+    <div class="row g-4 cr-body">
+
+      <!-- Calendar / date picker column -->
+      <div class="col-lg-5">
+        <div class="cr-card cr-calendar-card">
+          <h5 class="cr-card-title">Pick a date</h5>
+          <input type="text" id="datePicker" class="cr-date-input" placeholder="Select a date" readonly>
+          <div class="cr-legend">
+            <span class="cr-legend-dot"></span> Requests submitted on this date
+          </div>
+          <div class="cr-actions">
+            <button id="todayBtn" class="cr-btn cr-btn-outline">Today</button>
+            <button id="refreshBtn" class="cr-btn cr-btn-outline">Refresh data</button>
+          </div>
+          <p class="cr-status" id="status">Loading data…</p>
+        </div>
+      </div>
+
+      <!-- Results column -->
+      <div class="col-lg-7">
+        <div class="cr-card cr-results-card">
+          <div class="cr-results-header">
+            <h5 class="cr-card-title" id="resultsTitle">Requests</h5>
+            <span class="cr-count-badge" id="countBadge">0</span>
+          </div>
+          <div id="results" class="cr-results-list">
+            <div class="cr-empty">Loading…</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    <div class="row g-4">
+	 <div class="col-md-3">
+		<div class="footerlogo">
+			<img src="img/sreevalsan-astrologer-logo-ftr.png" alt="Sreevalsan's services Kerala astrology icon" loading="lazy" decoding="async">
+			<div class="astrofootername">
+				<span class="brand-name">AstroKalari</span>
+				<span class="brand-sub">Traditional Vedic Kerala Astrologer</span>
+			</div>
+		</div>
+		</div>
+      <div class="col-md-9 col-lg-3">
+        <h5>Sreevalsan — Madasseri Kalari</h5>
+        <p class="mt-3" style="color:rgba(251,246,236,0.55);">Rooted in Vedic Tradition. Guided by the Gurus. Inspired by Ancient Indian Rishis. Traditional Kerala Astrology, Ashtamangala Prashna, and Kalari heritage from Ayiranazhipadi, Malappuram, Kerala.</p>
+        </div>
+      <div class="col-md-6 col-lg-2">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled mt-3">
+          <li class="mb-2"><a href="about.html">About Sreevalsan</a></li>
+          <li class="mb-2"><a href="services.html">Services</a></li>
+		  <li class="mb-2"><a href="gallery.html">Gallery</a></li>
+          <li class="mb-2"><a href="testimonials.html">Testimonials</a></li>
+          <li class="mb-2"><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <h5>Get in Touch</h5>
+        <ul class="list-unstyled mt-3">
+          <li class="mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone" viewBox="0 0 16 16">
+  <path d="M11 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM5 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"></path>
+  <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2"></path>
+</svg> <a href="tel:+919645099441" class="footer-link">+91 96450 99441</a></li>
+          <li class="mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-send" viewBox="0 0 16 16">
+  <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576zm6.787-8.201L1.591 6.602l4.339 2.76z"></path>
+</svg> <a href="mailto:astrokalari4sree@gmail.com" class="footer-link">astrokalari4sree@gmail.com</a></li>
+          <li class="mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-map" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.5.5 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103M10 1.91l-4-.8v12.98l4 .8zm1 12.98 4-.8V1.11l-4 .8zm-6-.8V1.11l-4 .8v12.98z"></path>
+</svg> Ayiranazhipadi, Malappuram, Kerala</li>
+ <li class="mb-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-map" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.5.5 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103M10 1.91l-4-.8v12.98l4 .8zm1 12.98 4-.8V1.11l-4 .8zm-6-.8V1.11l-4 .8v12.98z"></path>
+</svg> Chembazhanthi, Thiruvananthapuram (Pre-booking consultation only)</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom d-flex flex-wrap justify-content-between">
+      <span>© 2026 Sreevalsan — Madasseri Kalari — Astrologer in Malappuram Kerala</span>
+      <span><div class="powered-by">
+    <span>Powered by</span>
+    <a href="https://www.isharaflow.com" target="_blank" rel="noopener">
+        <img src="img/isharaflow-icon.png" alt="IsharaFlow">
+        <strong>IsharaFlow</strong>
+    </a>
+</div></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr" defer></script>
+<script src="js/consultation-requests.js" defer></script>
+<script>
+// navbar scroll shadow, matches the rest of the site
+window.addEventListener('scroll', function () {
+  var nav = document.getElementById('mainNav');
+  if (nav) nav.classList.toggle('scrolled', window.scrollY > 40);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+/* ==========================================================================
+   consultation-requests.css
+   Page-specific styles for the Consultation Requests admin page.
+
+   These variables default to a gold / deep-maroon / cream palette that
+   matches the visible brand cues in the main template (Philosopher serif
+   headings, Lato body text, .btn-gold accents, cream footer text).
+   If your css/styles.css already defines brand variables (e.g. --gold,
+   --maroon, --cream), replace the values below with those variables so
+   this page stays perfectly in sync with future theme changes:
+
+     :root {
+       --cr-gold: var(--gold, #c9a227);
+       --cr-maroon: var(--maroon, #5b1a18);
+       ...
+     }
+   ========================================================================== */
+
+:root {
+  --cr-gold: #c9a227;
+  --cr-gold-dark: #a3801c;
+  --cr-maroon: #5b1a18;
+  --cr-cream: #fbf6ec;
+  --cr-ink: #241a12;
+  --cr-muted: #7a6f60;
+  --cr-border: #e7dfce;
+  --cr-card-bg: #ffffff;
+  --cr-font-heading: 'Philosopher', serif;
+  --cr-font-body: 'Lato', sans-serif;
+}
+
+.cr-page {
+  font-family: var(--cr-font-body);
+  background: var(--cr-cream);
+  color: var(--cr-ink);
+  padding-top: 120px; /* clears the fixed navbar */
+  padding-bottom: 80px;
+  min-height: 60vh;
+}
+
+.cr-wrap { max-width: 1080px; }
+
+.cr-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cr-header h1 {
+  font-family: var(--cr-font-heading);
+  font-weight: 700;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  color: var(--cr-maroon);
+  margin-bottom: 10px;
+}
+
+.cr-subtitle {
+  color: var(--cr-muted);
+  max-width: 620px;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+/* ---------------- Cards ---------------- */
+
+.cr-card {
+  background: var(--cr-card-bg);
+  border: 1px solid var(--cr-border);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 6px 24px rgba(91, 26, 24, 0.06);
+  height: 100%;
+}
+
+.cr-card-title {
+  font-family: var(--cr-font-heading);
+  color: var(--cr-maroon);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+/* ---------------- Calendar card ---------------- */
+
+.cr-date-input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--cr-border);
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: var(--cr-font-body);
+  background: var(--cr-cream);
+  color: var(--cr-ink);
+  cursor: pointer;
+}
+
+.cr-legend {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--cr-muted);
+  margin-top: 14px;
+}
+
+.cr-legend-dot,
+.cr-day-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #2563eb; /* the "blue dot" indicator requested */
+}
+
+.cr-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.cr-btn {
+  border-radius: 999px;
+  padding: 9px 18px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cr-btn-outline {
+  background: transparent;
+  border: 1.5px solid var(--cr-gold);
+  color: var(--cr-gold-dark);
+}
+
+.cr-btn-outline:hover {
+  background: var(--cr-gold);
+  color: #fff;
+}
+
+.cr-status {
+  margin-top: 16px;
+  font-size: 0.85rem;
+  color: var(--cr-muted);
+}
+
+/* ---------------- Results card ---------------- */
+
+.cr-results-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.cr-count-badge {
+  background: var(--cr-maroon);
+  color: var(--cr-cream);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: 999px;
+}
+
+.cr-results-list {
+  max-height: 520px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.cr-entry {
+  border: 1px solid var(--cr-border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  background: #fffefb;
+}
+
+.cr-entry h6 {
+  font-family: var(--cr-font-heading);
+  font-size: 1.05rem;
+  color: var(--cr-maroon);
+  margin-bottom: 6px;
+}
+
+.cr-entry .cr-row {
+  display: flex;
+  gap: 6px;
+  font-size: 0.88rem;
+  color: var(--cr-ink);
+  margin-top: 3px;
+}
+
+.cr-entry .cr-label {
+  font-weight: 700;
+  color: var(--cr-gold-dark);
+  min-width: 90px;
+}
+
+.cr-empty {
+  text-align: center;
+  color: var(--cr-muted);
+  padding: 40px 10px;
+  font-size: 0.95rem;
+}
+
+/* ---------------- Flatpickr day-dot indicator ---------------- */
+
+.flatpickr-day.cr-has-data {
+  position: relative;
+  font-weight: 700;
+}
+
+.flatpickr-day.cr-has-data::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #2563eb;
+}
+
+.flatpickr-day.selected.cr-has-data::after {
+  background: #fff;
+}
+
+/* ---------------- Responsive ---------------- */
+
+@media (max-width: 991px) {
+  .cr-page { padding-top: 100px; }
+  .cr-body { flex-direction: column-reverse; }
+}
+
+@media (max-width: 576px) {
+  .cr-card { padding: 18px; }
+  .cr-results-list { max-height: 400px; }
+}
