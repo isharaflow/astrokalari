@@ -211,9 +211,17 @@
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+<!-- Preload the hero image (LCP element) so the browser fetches it immediately
+     instead of waiting to discover it inside hero-bg's CSS background-image -->
+<link rel="preload" as="image" href="img/sreevalsan-panicker.jpg" fetchpriority="high">
+
 <link href="https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+<!-- animate.css removed: no animate__* classes are used anywhere on this page,
+     it was ~70KB of dead weight blocking first paint -->
 <link href="css/styles.css" rel="stylesheet">
 
 </head>
@@ -443,7 +451,7 @@
     <div class="row align-items-center gy-5">
       <div class="col-lg-5 reveal-left">
         <div class="about-img-wrap">
-          <img src="img/sreevalsan-panicker.jpg" alt="Sreevalsan — traditional Kerala Vedic astrologer of Madasseri Kalarickal">
+          <img src="img/sreevalsan-panicker.jpg" alt="Sreevalsan — traditional Kerala Vedic astrologer of Madasseri Kalarickal" loading="lazy" decoding="async">
           <div class="about-badge"><span>Rooted In</span>Tradition Vedic Kerala Astrology</div>
         </div>
       </div>
@@ -475,7 +483,7 @@
       <div class="col-lg-3 col-md-6 reveal">
         <div class="service-card">
           <div class="service-icon">
-			<img src="img/esoteric.png" alt="Sreevalsan's services Kerala astrology icon">
+			<img src="img/esoteric.png" alt="Sreevalsan's services Kerala astrology icon" loading="lazy" decoding="async">
 		  </div>
           <h4>Astro Consultation</h4>
             <p>Detailed horoscope preparation and explanation; astro guidance to find out chronological reasons for present and future obstacles; Muhurtham (Ouspicious time for a new beginning).</p>
@@ -484,7 +492,7 @@
       <div class="col-lg-3 col-md-6 reveal">
         <div class="service-card">
           <div class="service-icon">
-				<img src="img/parchment.png" alt="Sreevalsan's services Kerala astrology icon">
+				<img src="img/parchment.png" alt="Sreevalsan's services Kerala astrology icon" loading="lazy" decoding="async">
 		  </div>
           <h4>Prashna Sasthra</h4>
           <p>Literally known as Rashi, one who doesn't know their DOB and exact birth time can use Prasna Sastra for their consultation. Astro guidance for educational, job, family, and infertility-related issues. </p>
@@ -493,7 +501,7 @@
 	   <div class="col-lg-3 col-md-6 reveal">
         <div class="service-card">
           <div class="service-icon">
-			<img src="img/scroll.png" alt="Sreevalsan's services Kerala astrology icon">
+			<img src="img/scroll.png" alt="Sreevalsan's services Kerala astrology icon" loading="lazy" decoding="async">
 
 		  </div>
           <h4>Thamboola Prasna</h4>
@@ -503,7 +511,7 @@
       <div class="col-lg-3 col-md-6 reveal">
         <div class="service-card">
           <div class="service-icon">
-			<img src="img/scroll.png" alt="Sreevalsan's services Kerala astrology icon">
+			<img src="img/scroll.png" alt="Sreevalsan's services Kerala astrology icon" loading="lazy" decoding="async">
 
 		  </div>
           <h4>Ashtamangala Prasna</h4>
@@ -551,7 +559,7 @@
     <div class="row align-items-center gy-5">
       <div class="col-lg-5 reveal-left">
         <div class="about-img-wrap">
-          <img src="img/sreevalsan-panicker-kalaripayattu-01.jpg" alt="Sreevalsan practicing Kalaripayattu, the traditional martial art of Kerala">
+          <img src="img/sreevalsan-panicker-kalaripayattu-01.jpg" alt="Sreevalsan practicing Kalaripayattu, the traditional martial art of Kerala" loading="lazy" decoding="async">
           <div class="about-badge"><span>Trained By</span>Vipindas Gurukkal, Athma Kalari Village</div>
         </div>
       </div>
@@ -605,7 +613,7 @@
       <div class="col-lg-6 reveal-right">
         <div class="map-wrap h-100">
 		  <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d489.49672580214985!2d76.1552693355834!3d11.040590659340326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1786017000320!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d346.1264104148715!2d76.15492181850223!3d11.040627792007847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba635d8424fe0f3%3A0xd9c81957074d5b04!2sSreevalsan!5e0!3m2!1sen!2sin!4v1788332153304!5m2!1sen!2sin"
             width="100%" height="100%" style="border:0;min-height:420px;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
             title="Sreevalsan MK — Ayiranazhipadi, Malappuram, Kerala location map">
@@ -869,7 +877,7 @@ When a person feels uncertain, overwhelmed, or temporarily stuck, the wisdom of 
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
 </button>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -924,24 +932,29 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 <script>
-// custom fast cursor
-const dot = document.getElementById('cursorDot');
-const ring = document.getElementById('cursorRing');
-let mx=0,my=0,rx=0,ry=0;
-window.addEventListener('mousemove', e=>{
-  mx=e.clientX; my=e.clientY;
-  dot.style.left=mx+'px'; dot.style.top=my+'px';
-});
-function loop(){
-  rx += (mx-rx)*0.35; ry += (my-ry)*0.35; // fast follow, low smoothing
-  ring.style.left=rx+'px'; ring.style.top=ry+'px';
-  requestAnimationFrame(loop);
+// custom fast cursor — only runs on devices with a real mouse/trackpad.
+// Touchscreens (nearly all mobile visitors) have no cursor to draw, so this
+// used to run a requestAnimationFrame loop forever for nothing, burning
+// battery/CPU and hurting mobile responsiveness (INP) for no visual benefit.
+if (window.matchMedia('(pointer: fine)').matches) {
+  const dot = document.getElementById('cursorDot');
+  const ring = document.getElementById('cursorRing');
+  let mx=0,my=0,rx=0,ry=0;
+  window.addEventListener('mousemove', e=>{
+    mx=e.clientX; my=e.clientY;
+    dot.style.left=mx+'px'; dot.style.top=my+'px';
+  });
+  function loop(){
+    rx += (mx-rx)*0.35; ry += (my-ry)*0.35; // fast follow, low smoothing
+    ring.style.left=rx+'px'; ring.style.top=ry+'px';
+    requestAnimationFrame(loop);
+  }
+  loop();
+  document.querySelectorAll('a, button, .service-card, .testimonial-card, .gallery-item').forEach(el=>{
+    el.addEventListener('mouseenter', ()=>ring.classList.add('hover'));
+    el.addEventListener('mouseleave', ()=>ring.classList.remove('hover'));
+  });
 }
-loop();
-document.querySelectorAll('a, button, .service-card, .testimonial-card, .gallery-item').forEach(el=>{
-  el.addEventListener('mouseenter', ()=>ring.classList.add('hover'));
-  el.addEventListener('mouseleave', ()=>ring.classList.remove('hover'));
-});
 
 // navbar scroll state
 const nav = document.getElementById('mainNav');
