@@ -279,12 +279,9 @@
       <!-- ---- Consultation form (glassmorphism) ---- -->
       <div class="col-lg-5 reveal-right">
         <div class="hero-consult-form">
-          <h3>Get a Consultation</h3>
-
+          <h3>For Booking</h3>
           <!-- Google Form hidden iframe -->
           <iframe name="googleFormTarget" id="googleFormTarget" style="display:none;"></iframe>
-
-        
           <form
             id="contactForm"
             action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdDDH1TsdXVyArT7irVXq8N2HlQKAbkl1ozphMinDxTnhMm0Q/formResponse"
@@ -887,7 +884,7 @@ When a person feels uncertain, overwhelmed, or temporarily stuck, the wisdom of 
 </footer>
 
 <!-- ================= FLOATING BUTTONS ================= -->
-<a href="https://wa.me/919645099441?text=Namaste%2C%0AI%20would%20like%20to%20book%20an%20astrology%20consultation." target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+<a href="https://wa.me/919645099441?text=Namaste%2C%0AI%20would%20like%20to%20book%20an%20astrology%20consultation." target="_blank" id="whtspToTop" class="whatsapp-float" aria-label="Chat on WhatsApp">
   <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.39 1.26 4.81L2 22l5.42-1.38a9.9 9.9 0 0 0 4.62 1.14h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm0 18.11h-.01a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.12.8.83-3.05-.2-.31a8.2 8.2 0 0 1-1.26-4.32c0-4.53 3.69-8.22 8.24-8.22 2.2 0 4.27.86 5.82 2.42a8.17 8.17 0 0 1 2.41 5.81c0 4.53-3.69 8.19-8.23 8.19Zm4.51-6.15c-.25-.12-1.47-.72-1.7-.81-.23-.08-.4-.12-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.36-.77-1.86-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.86.85-.86 2.06 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.53.59.19 1.13.16 1.55.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.23-.17-.48-.29Z"/></svg>
 </a>
 <button class="back-to-top" id="backToTop" aria-label="Back to top">
@@ -978,6 +975,7 @@ const nav = document.getElementById('mainNav');
 window.addEventListener('scroll', ()=>{
   nav.classList.toggle('scrolled', window.scrollY>40);
   document.getElementById('backToTop').classList.toggle('show', window.scrollY>500);
+  document.getElementById('whtspToTop').classList.toggle('show', window.scrollY>500);
 });
 
 // back to top
